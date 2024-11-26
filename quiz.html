@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top_left">
+        <h1>Take the quiz below!</h1>
+        <button onclick="location.href='index.html'">Go Back</button>
+        <p>What is your guiding principle in life?</p>
+        <div class="grid">
+            <button class="option" onclick="handleAnswer(this, 'lordshang')">
+                <img src="confucius.jpg" alt="Confucius">
+                <span>Harmony and Relationships</span>
+            </button>
+            <button class="option" onclick="handleAnswer(this, 'confucius')">
+                <img src="laozi.jpg" alt="Laozi">
+                <span>Flow and Simplicity</span>
+            </button>
+            <button class="option" onclick="handleAnswer(this, 'mengzu')">
+                <img src="mozi.jpg" alt="Mozi">
+                <span>Universal Love and Merit</span>
+            </button>
+            <button class="option" onclick="handleAnswer(this, 'xunzi')">
+                <img src="hanfei.jpg" alt="Han Fei">
+                <span>Rules and Authority</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
