@@ -20,7 +20,7 @@ body {
 }
 
 .question p {
-    font-size: 1.2em;
+    font-size: 2em;
     color: #333;
     margin-bottom: 10px;
 }
@@ -106,7 +106,7 @@ button:hover::after {
 
 .option img {
     width: 80%;
-    height: auto;
+    height: 80%;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;

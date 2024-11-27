@@ -1,6 +1,6 @@
 const selectedAnswers = {};
 const philosopherScores = {
-    "Lord Shang": 0,
+    "Lordshang": 0,
     "Confucius": 0,
     "Mengzi": 0,
     "Xunzi": 0
@@ -17,6 +17,7 @@ function handleAnswer(option, questionId) {
 
     selectedAnswers[questionId] = philosopher;
     philosopherScores[philosopher]++;
+
 
     const questionElement = document.getElementById(questionId);
     const options = questionElement.querySelectorAll(".option");
@@ -58,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const resultButton = document.getElementById("seeResults");
-    resultButton.addEventListener("click", () => {
-        window.location.href = "result.html"; 
-    });
+    // resultButton.addEventListener("click", () => {
+    //     window.location.href = "result.html"; 
+    // });
     resultButton.addEventListener("click", calculateResult);
 });
