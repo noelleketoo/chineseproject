@@ -1,24 +1,51 @@
 body {
     font-family: Trebuchet, sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #ffffff;
-}
-
-.container {
     text-align: center;
 }
 
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+.question p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    text-align: center; /* Center the button horizontally */
+    margin-bottom: 20px; /* Add space below the button */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 20px;
     text-align: center;
 }
 
 button {
+    position: relative; 
     border-radius: 4px;
     background-color: #5ca1e1;
     border: none;
@@ -29,56 +56,45 @@ button {
     width: 220px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 36px;
-    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
 }
 
-button{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  button:after {
+button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+button::after {
     content: '»';
     position: absolute;
-    opacity: 0;  
-    top: 14px;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
     right: -20px;
-    transition: 0.5s;
-  }
-  
-  button:hover{
-    padding-right: 24px;
-    padding-left:8px;
-  }
-  
-  button:hover:after {
+    transition: opacity 0.5s, right 0.5s;
+}
+
+button:hover::after {
     opacity: 1;
     right: 10px;
-  }
-
-.top_left {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    text-align: left;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .option {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px; 
-    height: 200px; 
+    width: 300px;
+    height: 250px;
     padding: 10px;
     border: none;
     background-color: #fff;
@@ -90,19 +106,22 @@ button{
 
 .option img {
     width: 80%;
-    height: auto; 
-    object-fit: cover; 
+    height: auto;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
 .option span {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
 }
 
-.option:hover {
+.option:hover,
+.option.selected {
     transform: scale(1.05);
     background-color: #f0f0f0;
+    box-shadow: 0 12px 25px -10px rgba(0, 0, 0, 0.3);
+    color: #000;
 }

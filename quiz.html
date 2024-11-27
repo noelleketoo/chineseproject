@@ -7,28 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="top_left">
+    <div class="quiz-container">
         <h1>Take the quiz below!</h1>
-        <button onclick="location.href='index.html'">Go Back</button>
-        <p>Which holiday would you create out of the four below?</p>
-        <div class="grid">
-            <button class="option" onclick="handleAnswer(this, 'lordshang')">
-                <img src="lord shang 1.jpg" alt="Lord Shang">
-                <span>A holiday celebrating law and the military.</span>
-            </button>
-            <button class="option" onclick="handleAnswer(this, 'confucius')">
-                <img src="confucius 1.jpg" alt="Confucius">
-                <span>A holiday celebrating family, especially elders.</span>
-            </button>
-            <button class="option" onclick="handleAnswer(this, 'mengzi')">
-                <img src="mengzi 1.jpg" alt="Mengzi">
-                <span>A holiday to promote being compassionate.</span>
-            </button>
-            <button class="option" onclick="handleAnswer(this, 'xunzi')">
-                <img src="xunzi 1.jpg" alt="Xunzi">
-                <span>A holidary dedicated to becoming disciplined.</span>
-            </button>
+        <div class="button-container">
+            <button onclick="location.href='index.html'">Go Back</button>
         </div>
+
+        <div class="question" id="question1">
+            <p>Which holiday would you create out of the four below?</p>
+            <div class="grid">
+                <div class="option" philospher="Lord Shang" onclick="handleAnswer(this, 'question1')">
+                    <img src="lord shang 1.jpg" alt="Lord Shang">
+                    <span>A holiday celebrating law and the military.</span>
+                </div>
+                <div class="option" philosopher="Confucius" onclick="handleAnswer(this, 'question1')">
+                    <img src="confucius 1.jpg" alt="Confucius">
+                    <span>A holiday celebrating family, especially elders.</span>
+                </div>
+                <div class="option" philosopher="Mengzi" onclick="handleAnswer(this, 'question1')">
+                    <img src="mengzi 1.jpg" alt="Mengzi">
+                    <span>A holiday to promote being compassionate.</span>
+                </div>
+                <div class="option" philosopher="Xunzi" onclick="handleAnswer(this, 'question1')">
+                    <img src="xunzi 1.jpg" alt="Xunzi">
+                    <span>A holiday dedicated to becoming disciplined.</span>
+                </div>
+            </div>
+        </div>
+        <div class="question" id="question1">
+            <p>What's your favorite kind of music?</p>
+            <div class="grid">
+                <div class="option" philosopher="Lord Shang" onclick="handleAnswer(this, 'question2')">
+                    <img src="lord shang 2.jpg" alt="Lord Shang">
+                    <span>I don't listen to music, it's a waste of time.</span>
+                </div>
+                <div class="option" philosopher="Confucius" onclick="handleAnswer(this, 'question2')">
+                    <img src="confucius 2.jpg" alt="Confucius">
+                    <span>Traditional, harmonious music.</span>
+                </div>
+                <div class="option" philosopher="Mengzi" onclick="handleAnswer(this, 'question2')">
+                    <img src="mengzi 2.jpg" alt="Mengzi">
+                    <span>Songs about loving others.</span>
+                </div>
+                <div class="option" philosopher="Xunzi" onclick="handleAnswer(this, 'question2')">
+                    <img src="xunzi 2.jpg" alt="Xunzi">
+                    <span>Classical music from the masters.</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="button-container">
+            <button id="seeResults">See Results</button>
+        </div>
+
     </div>
+    <script src="app.js"></script> 
 </body>
 </html>
