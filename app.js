@@ -18,7 +18,7 @@ function handleAnswer(option, questionId) {
     selectedAnswers[questionId] = philosopher;
     philosopherScores[philosopher]++;
 
-
+    // hi i love you
     const questionElement = document.getElementById(questionId);
     const options = questionElement.querySelectorAll(".option");
     options.forEach(opt => opt.classList.remove("selected")); 
