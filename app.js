@@ -3,7 +3,7 @@ const philosopherScores = {
     "Lordshang": 0,
     "Confucius": 0,
     "Mengzi": 0,
-    "Xunzi": 0
+    "Mozi": 0
 };
 
 function handleAnswer(option, questionId) {
